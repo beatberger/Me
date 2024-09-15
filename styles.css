@@ -25,7 +25,7 @@ img {
 
 /* Spezifische Regel für das Profilbild */
 .profile-pic {
-    width: 300px; /* Breite auf 300px setzen */
+    width: 400px; /* Breite auf 300px setzen */
     height: auto; /* Höhe automatisch anpassen */
     border-radius: 20%; /* Runde Ecken */
 }
