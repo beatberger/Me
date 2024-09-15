@@ -21,12 +21,11 @@ h1 {
 img {
     max-width: 100%;
     height: auto;
-    border-radius: 0; /* Standard-Wert für border-radius */
 }
 
 /* Spezifische Regel für das Profilbild */
 .profile-pic {
-    width: 100px; /* Breite auf 50px setzen */
-    height: 100px; /* Höhe auf 50px setzen, um ein Quadrat zu erhalten */
-    border-radius: 50%; /* Runde Ecken für ein Kreisbild */
+    width: 50px; /* Breite auf 50px setzen */
+    height: auto; /* Höhe automatisch anpassen */
+    border-radius: 50%; /* Runde Ecken */
 }
