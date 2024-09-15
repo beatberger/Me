@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Spezifische Regel für das Profilbild */
+.profile-pic {
+    width: 150px; /* Ändere die Breite nach Bedarf */
+    height: auto; /* Höhe automatisch anpassen */
+}
+
