@@ -26,7 +26,7 @@ img {
 
 /* Spezifische Regel für das Profilbild */
 .profile-pic {
-    width: 50px; /* Breite auf 50px setzen */
-    height: 50px; /* Höhe auf 50px setzen, um ein Quadrat zu erhalten */
+    width: 100px; /* Breite auf 50px setzen */
+    height: 100px; /* Höhe auf 50px setzen, um ein Quadrat zu erhalten */
     border-radius: 50%; /* Runde Ecken für ein Kreisbild */
 }
