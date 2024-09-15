@@ -1,18 +1,23 @@
+/* Stile für den gesamten Body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Ubuntu', sans-serif; /* Schriftart Ubuntu */
     line-height: 1.6;
     margin: 20px;
+    background-color: #f4f4f4; /* Leicht grauer Hintergrund */
 }
 
+/* Stile für die Hauptüberschrift */
 h1 {
     color: #333;
 }
 
+/* Stile für den Container */
 .container {
     max-width: 800px;
     margin: auto;
 }
 
+/* Stile für Bilder */
 img {
     max-width: 100%;
     height: auto;
@@ -20,7 +25,7 @@ img {
 
 /* Spezifische Regel für das Profilbild */
 .profile-pic {
-    width: 150px; /* Ändere die Breite nach Bedarf */
+    width: 50px; /* Breite auf 50px setzen */
     height: auto; /* Höhe automatisch anpassen */
+    border-radius: 50%; /* Runde Ecken */
 }
-
