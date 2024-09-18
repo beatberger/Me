@@ -35,3 +35,14 @@ button:hover {
     margin-top: 20px;
     font-size: 18px;
 }
+
+/* Profilbild */
+.profile-pic {
+    width: 200px; /* Größe des Bildes */
+    height: 200px;
+    border-radius: 50%; /* Bild rund machen */
+    object-fit: cover; /* Sorgt dafür, dass das Bild korrekt beschnitten wird */
+    display: block;
+    margin: 20px auto; /* Zentriert das Bild innerhalb des Containers */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Schatten für einen coolen Effekt */
+}
