@@ -34,14 +34,13 @@ document.getElementById('superhero-quiz').addEventListener('submit', function(ev
             const resultDiv = document.getElementById('result');
             resultDiv.innerHTML = `
                 <h3>Du bist ${data.name}!</h3>
-                <img src="${data.image.url}" alt="${data.name}" style="max-width: 200px;">
-                <p><strong>Kraft:</strong> ${data.powerstats.strength}</p>
-                <p><strong>Schnelligkeit:</strong> ${data.powerstats.speed}</p>
-                <p><strong>Intelligenz:</strong> ${data.powerstats.intelligence}</p>
-                <p><strong>Berühmtes Zitat:</strong> ${data.biography['full-name']}</p>
+                <img src="${data.image.url}" alt="${data.name}" style="max-width: 200px; border-radius: 10px;">
+                <p>${data.name} ist bekannt für: ${data.biography['full-name']}</p>
             `;
         })
         .catch(error => {
-            console.error('Fehler bei der Superhero API-Anfrage:', error);
+            console.error('Fehler beim Abrufen des Superhelden:', error);
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `<p>Es gab ein Problem beim Abrufen deiner Superhelden-Identität. Bitte versuche es später noch einmal.</p>`;
         });
 });
