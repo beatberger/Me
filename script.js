@@ -5,14 +5,15 @@ document.getElementById('superhero-quiz').addEventListener('submit', function(ev
     const moral = document.getElementById('moral').value;
     const city = document.getElementById('city').value;
     
-    // Beispielhafte ID basierend auf Antworten (das musst du dynamisch anpassen)
-    const heroId = '1'; // Ersetze dies durch die tatsächliche Logik
+    // Beispielhafte ID basierend auf Antworten
+    // Normalerweise sollte die ID aus den Antworten ermittelt werden
+    const heroId = '1'; // Ersetze dies mit der dynamischen ID
 
-    // URL der API (dynamisch für deine IDs anpassen)
-    const apiUrl = `https://superheroapi.com/api/d6ada0c4cf8b035ddd1810e4a21c4923/${heroId}`;
+    // Verwende CORS-Proxy
+    const corsProxy = 'https://cors-anywhere.herokuapp.com/';
+    const apiUrl = `${corsProxy}https://superheroapi.com/api/d6ada0c4cf8b035ddd1810e4a21c4923/${heroId}`;
 
-    // fetch mit CORS-Einstellungen
-    fetch(apiUrl, { mode: 'no-cors' })  // Hier kommt das 'cors' oder 'no-cors' rein
+    fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Netzwerkantwort war nicht ok');
