@@ -12,7 +12,7 @@ document.getElementById('superhero-quiz').addEventListener('submit', function(ev
     const apiUrl = `https://superheroapi.com/api/d6ada0c4cf8b035ddd1810e4a21c4923/${heroId}`;
 
     // fetch mit CORS-Einstellungen
-    fetch(apiUrl, { mode: 'cors' })  // Hier kommt das 'cors' oder 'no-cors' rein
+    fetch(apiUrl, { mode: 'no-cors' })  // Hier kommt das 'cors' oder 'no-cors' rein
         .then(response => {
             if (!response.ok) {
                 throw new Error('Netzwerkantwort war nicht ok');
