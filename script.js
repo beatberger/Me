@@ -1,9 +1,21 @@
 document.getElementById('superhero-quiz').addEventListener('submit', function(event) {
     event.preventDefault();
+    
+    // Werte der Formulardaten holen
+    const power = document.getElementById('power').value;
+    const moral = document.getElementById('moral').value;
+    const city = document.getElementById('city').value;
 
-    const heroId = '1'; // Beispiel ID
-    const corsProxy = 'https://thingproxy.freeboard.io/fetch/';
-    const apiUrl = `${corsProxy}https://superheroapi.com/api/d6ada0c4cf8b035ddd1810e4a21c4923/${heroId}`;
+    // Funktion zum Abrufen einer zufälligen Superhelden-ID
+    function getRandomHeroId() {
+        return Math.floor(Math.random() * 731) + 1; // IDs sind zwischen 1 und 731
+    }
+
+    // Zufällige Superhelden-ID auswählen
+    const heroId = getRandomHeroId();
+
+    // API URL für die Superhelden-Daten
+    const apiUrl = `https://superheroapi.com/api/access-token/${heroId}`;
 
     fetch(apiUrl)
         .then(response => {
@@ -13,6 +25,10 @@ document.getElementById('superhero-quiz').addEventListener('submit', function(ev
             return response.json();
         })
         .then(data => {
+            if (!data || !data.name) {
+                throw new Error('Kein Superheld gefunden');
+            }
+
             const resultDiv = document.getElementById('result');
             resultDiv.innerHTML = `
                 <h3>Du bist ${data.name}!</h3>
