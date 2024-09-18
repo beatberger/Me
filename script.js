@@ -1,6 +1,6 @@
 document.getElementById('superhero-quiz').addEventListener('submit', function(event) {
     event.preventDefault();
-    
+
     const heroId = '1'; // Beispiel ID
     const corsProxy = 'https://thingproxy.freeboard.io/fetch/';
     const apiUrl = `${corsProxy}https://superheroapi.com/api/d6ada0c4cf8b035ddd1810e4a21c4923/${heroId}`;
