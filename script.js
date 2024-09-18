@@ -27,6 +27,7 @@ document.getElementById('superhero-quiz').addEventListener('submit', function(ev
     const apiKey = 'd6ada0c4cf8b035ddd1810e4a21c4923';
     const apiUrl = `https://superheroapi.com/api/${apiKey}/${heroId}`;
 
+
     // API-Aufruf, um den Superhelden basierend auf der ID abzurufen
     fetch(apiUrl)
         .then(response => response.json())
